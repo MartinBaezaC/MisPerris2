@@ -1,0 +1,126 @@
+header{
+	color: white;
+	background:  #00e6b8;
+	text-align: center;
+}
+
+nav{
+	color: white;
+	background: #00e6b8;
+}
+
+
+
+body{			
+	font-family: calibri;		
+}
+
+a{
+	background: #13EFC2;
+	display: grid;			
+	color: white;	
+}	
+
+img{
+	width: 512px;	
+}
+
+footer{
+	opacity: 0.75;			
+	background: #797473;			
+}	
+
+#titulo{
+	 text-align: left;
+}
+
+.subTitulo{
+	opacity: 0.5;
+}	
+
+#logo{
+	width: 48px;
+	float: right;
+	margin-top: 12px;
+}
+		
+.redsocial{
+	width: 48px;
+	display: inline;
+}
+
+#redesSociales{
+	background: #00e6b8;
+}
+
+#articulo1{
+	text-align: right; 
+	margin-right: 24px;
+}
+
+#articulo2{
+	text-align: left; 
+	margin-left: 24px;
+}
+
+.boxNav{
+	margin-top: 6px;
+	margin-bottom: 6px;
+}
+
+#myCarousel{
+	background: #00e6b8;
+}
+
+#pFinal{
+	margin-left: 24px;
+}
+
+#btnCampañas{
+	border: solid;
+	margin-bottom: 12px;
+}
+
+#linkCampañas{
+	color: black; 
+	background: white;
+}
+
+.redesBox{
+	margin: 12px;
+}
+
+#rescate{
+	width: 50%;
+}
+
+#crowfunding{
+	width: 50%;
+}
+
+#imgPerrito{
+	width: 10%;
+}
+
+.imgGaleria{
+	width: 100%;
+}
+
+.descripcion{	
+	border: solid;
+	border-radius: 5px;
+	border-color: white;
+	color: white;
+	font-family: "Verdana";
+	margin-top: 48px;
+	width: 50%;
+	margin: 0 auto;
+	background: gray;
+}
+
+
+
+
+
+
+		
