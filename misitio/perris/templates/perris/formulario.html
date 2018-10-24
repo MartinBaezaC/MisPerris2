@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -7,6 +8,8 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.js"></script>
 	<link rel="stylesheet" href="css/main.css">	
 	<script src="js/jquery-3.3.1.min.js"></script>
+	<link rel="stylesheet" href="{% static 'css/main.css' %}">
+	<link rel="stylesheet" href="{% static 'css/galeria.css' %}">
 	<title>Contáctanos</title>
 
 	
@@ -35,7 +38,7 @@
 							col-sm-12
 							col-xs-12">
 					<div class="boxNav">
-						<a href="index.html"><h3>Inicio</h3></a>					
+						<a href="/perris/inicio"><h3>Inicio</h3></a>					
 					</div>
 				</div>
 
@@ -85,7 +88,7 @@
 		                                placeholder="Ingrese Rut" required ></div>
 
 		                      <div>Nombre Completo : <input type="text" id="txtNombre" 
-		                                required></div>
+		                                required placeholder="Ej: Juan Perez"></div>
 
 		                      <div>Fecha de Nacimiento : <input id="fechaNac" type="date" required max="2001-01-01"></div>
 
