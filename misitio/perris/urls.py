@@ -9,5 +9,6 @@ urlpatterns = [
     path('inicio/formulario', views.cargarFormulario, name='cargarFormulario'),
     path('inicio/formularioPerros', views.cargarFormularioPerros, name='cargarFormularioPerros'),
     path('inicio/grabarPerro', views.grabarPerro, name='grabarPerro'),
+    path('inicio/listadoRescatados', views.cargarRescatados, name='cargarRescatados'),
     
 ]

@@ -29,4 +29,20 @@ def grabarPerro(request):
     p.save()
     return render(request, 'perris/grabarPerro.html',
                   {'nombre' : nombre})
+
+def cargarRescatados(request):	
+	#Obtenemos los departamentos ordenados de manera descendente.
+	#[Z-A] Se antepone el signo menos (-)
+    rescatadosRecuperados = Perro.objects.filter(estado='R')
+
+    #Cargamos el archivo index.html que se encuentra en la carpeta 'templates'
+    template = loader.get_template('perris/cargarRescatados.html')
+
+    #Creamos el nombre 'deptos' para reutilizarlo en el archivo 'index.html'
+    context = {
+        'perros': rescatadosRecuperados,
+    }
+
+    #Invocamos la página de respuesta 'index.html'
+    return HttpResponse(template.render(context, request))
 # Create your views here.

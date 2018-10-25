@@ -1,0 +1,127 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" type="text/css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.js"></script>
+	<link rel="stylesheet" href="css/main.css">	
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<link rel="stylesheet" href="{% static 'css/main.css' %}">
+	<link rel="stylesheet" href="{% static 'css/galeria.css' %}">
+	<title>Contáctanos</title>
+
+	
+</head>
+<body>
+	<div class="container">
+		<header>
+			<div class="row center-xs">
+				<div class=" col-lg-6			
+								col-xs-6">
+					<div class="box">
+						<img id="logo" src="{% static "img/logo_hueso.png" %}" alt="Aquí estaba el logo">
+						
+					</div>			
+				</div>
+				<div class=" col-lg-6							
+							  	col-xs-6">
+					<h1 id="titulo">Mis Perris</h1>
+				</div>
+			</div>
+		</header>
+		<nav>
+			<div class="row center-xs">
+				<div class="col col-lg-3
+							col-md-6
+							col-sm-12
+							col-xs-12">
+					<div class="boxNav">
+						<a href="/perris/inicio"><h3>Inicio</h3></a>					
+					</div>
+				</div>
+
+				<div class="col col-lg-3
+								col-md-6
+								col-sm-12
+								col-xs-12">
+					<div class="boxNav">	
+						<a href="#"><h3>Quienes Somos</h3></a>				
+					</div>
+				</div>
+
+				<div class="col col-lg-3
+								col-md-6
+								col-sm-12
+								col-xs-12">
+					<div class="boxNav">
+						<a href="#"><h3>Servicios</h3></a>						
+					</div>
+				</div>
+
+				<div class="col col-lg-3
+								col-md-6
+								col-sm-12
+								col-xs-12">
+					<div class="boxNav">	
+						<a href="/perris/inicio/formulario"><h3>Contáctanos</h3></a>						
+					</div>
+				</div>	
+			</div>
+		</nav>
+		
+		<section>
+			<div class="row center-xs">
+				<h2>Lista de perritos rescatados</h2>
+			</div>
+			
+			<div class="row center-xs">
+				<div class="col col-xs-12
+								col-lg-3" >					
+					
+				</div>
+				<div class="col col-xs-12
+								col-lg-3" >					
+					{% if perros %}
+					    <ul id="listado" style="text-align: left">
+					    {% for p in perros %}
+					        <li><a href="/perris/inicio/formulario" style=" color: black; background-color: white">{{ p.nombre }},{{ p.raza }},{{ p.estado }}escatado</a></li>
+					    {% endfor %}
+					    </ul>
+					{% else %}
+					    <p>No hay Perros .</p>
+					{% endif %}
+				</div>
+				<div class="col col-xs-12
+								col-lg-3" >					
+					
+				</div>
+			</div>
+			<div class="row center-xs">
+				<a id="btnVolverInicio" href="/perris/inicio" style="color: black; background-color: white; border:solid;">Volver</a>
+			</div>
+			<div class="row start-xs">
+				<div class="col col-xs-12">
+					<img id="imgPerrito" src="{% static "img/perrito.jpg" %}" alt="aquí habia una imagen de un perro">
+				</div>
+			</div>
+		</section>
+
+		<footer>
+			<div class="row start-xs">
+				<div class="box">
+					<p id="pFinal">Desarrollo Web y Mobile</p>
+					<br/>
+				</div>
+			</div>
+		</footer>
+	</div>
+	
+
+</body>
+</html>
+
+
+
+
