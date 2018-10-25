@@ -65,7 +65,7 @@
 								col-sm-12
 								col-xs-12">
 					<div class="boxNav">	
-						<a href="/perris/inicio/formularioPerros"><h3>Agregar Perritos</h3></a>						
+						<a href="/perris/inicio/formulario"><h3>Contáctanos</h3></a>						
 					</div>
 				</div>	
 			</div>
@@ -74,49 +74,31 @@
 		<section>
 			<div class="row center-xs">
 				<div class="col col-xs-12">					
-					<form id="reg_formu" action="#" >
-		              <h2>Crear Cuenta para Adopción</h2>
+					<form id="reg_formu" action="/perris/inicio/grabarPerro" method="post">
+						{% csrf_token %}
+		              <h2>Agregar Perrito</h2>
 		                    
-		                    <div>Correo Electrónico:
-		                    	<input type="email" id="email" required placeholder="correo@dominio.cl">
-		                     </div>
+		                    <div>
+		                    	Nombre : <input type="text" name="txtNombre" required placeholder="Ej: Firulais">
+		                    </div>		                      
 
+		                    <div>
+		                    	Raza : <input type="text" name="txtRaza" required placeholder="Ej: Pastor Alemán">
+		                    </div>
 
-		                      <div>Run : <input type="text" minlength="10" maxlength="10" 
-		                                       id="txtRut"
-		                                       onkeyup="checkRut()" 
-		                                placeholder="Ingrese Rut" required ></div>
+		                    <div>
+		                    	Descripción : <input type="text" name="txtDescrip" required placeholder="Ej: Datos del perrito">
+		                    </div>
 
-		                      <div>Nombre Completo : <input type="text" id="txtNombre" 
-		                                required placeholder="Ej: Juan Perez"></div>
-
-		                      <div>Fecha de Nacimiento : <input id="fechaNac" type="date" required max="2001-01-01"></div>
-
-		                      <div>Telefono de Contacto : <input type="text"  id="txtTel" maxlength="9" 
-                                onkeypress="return solonumeros(event)"
-                                placeholder="Ingrese Telefono" required > </div>
-
-		                      <div>Region : 
-		                      <select id="txtRegion" oninput="selectCity()" required="">
-		                      </select>
-		                      </div>
-
-		                      <div for="txtCity">Ciudad : 
-		                      <select id="txtCity" required></select>
-		                      </div>
-
-		                      <div>Tipo de Vivienda : 
-		                      <select required>
-		                      <option value="Casa con patio grande">Casa con patio grande</option>
-		                      <option value="Casa con patio pequeño">Casa con patio pequeño</option>
-		                      <option value="Casa sin patio ">Casa sin patio</option>
-		                      <option value="Departamento">Departamento</option>
-		                      </select>
-		                      </div>
-		                      <script src="js/region.js"></script>
-		                      <script src="js/validarRUT.js"></script>
+		                    <div>Estado : 
+		                    	<select required name="cmbEstado">
+		                      		<option value="R">Rescatado</option>
+		                      		<option value="D">Disponible</option>
+		                      		<option value="A">Adoptado</option>		                      
+		                      	</select>
+		                    </div>	                     
 		                     
-		                    <button type="submit" value="Registrar" id="btnValidar"> Registrar </button>                 
+		                    <button type="submit" value="Registrar"> Registrar </button>                 
 		        	</form>		        
 				</div>
 			</div>

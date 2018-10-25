@@ -7,4 +7,7 @@ urlpatterns = [
     path('<int:perro_id>/', views.detalle, name='detalle'),
     path('inicio', views.cargarInicio, name='cargarInicio'),
     path('inicio/formulario', views.cargarFormulario, name='cargarFormulario'),
+    path('inicio/formularioPerros', views.cargarFormularioPerros, name='cargarFormularioPerros'),
+    path('inicio/grabarPerro', views.grabarPerro, name='grabarPerro'),
+    
 ]
