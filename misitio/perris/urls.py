@@ -13,5 +13,7 @@ urlpatterns = [
     path('inicio/grabarPerro', views.grabarPerro, name='grabarPerro'),
 
     path('inicio/listadoRescatados', views.cargarRescatados, name='cargarRescatados'),
+
+    
     
 ]

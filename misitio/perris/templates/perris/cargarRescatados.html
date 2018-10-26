@@ -73,7 +73,7 @@
 		
 		<section>
 			<div class="row center-xs">
-				<h2>Lista de perritos rescatados</h2>
+				<h2>Lista de perritos rescatados y disponibles</h2>
 			</div>
 			
 			<div class="row center-xs">
@@ -86,7 +86,7 @@
 					{% if perros %}
 					    <ul id="listado" style="text-align: left">
 					    {% for p in perros %}
-					        <li><a href="/perris/inicio/formulario" style=" color: black; background-color: white">{{ p.nombre }},{{ p.raza }},{{ p.estado }}escatado</a></li>
+					        <li><a href="/perris/inicio/formulario" style=" color: black; background-color: white">{{ p.nombre }},{{ p.raza }},{{ p.descripcion }}</a></li>
 					    {% endfor %}
 					    </ul>
 					{% else %}

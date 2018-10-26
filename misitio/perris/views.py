@@ -46,7 +46,7 @@ def grabarUsuario(request):
 def cargarRescatados(request):	
 	#Obtenemos los departamentos ordenados de manera descendente.
 	#[Z-A] Se antepone el signo menos (-)
-    rescatadosRecuperados = Perro.objects.filter(estado='R')
+    rescatadosRecuperados = Perro.objects.exclude(estado='A')
 
     #Cargamos el archivo index.html que se encuentra en la carpeta 'templates'
     template = loader.get_template('perris/cargarRescatados.html')
