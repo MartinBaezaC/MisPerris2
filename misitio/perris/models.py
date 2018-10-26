@@ -15,6 +15,8 @@ class Usuario(models.Model):
 	nombre_completo = models.CharField(max_length=60)
 	fecha_nac = models.DateField()
 	telefono = models.IntegerField()
+	region = models.CharField(max_length=100 , default='Arica y Parinacota')
+	ciudad = models.CharField(max_length=120, default='Arica')
 	VIVIENDAS=(('CPG','Casa con patio grande'),('CPP','Casa con patio pequeño'),('CSP','Casa sin patio'),('DEP','Departamento'))
 	vivienda = models.CharField(max_length=3, choices=VIVIENDAS,default='CPG')
 	def __str__(self):

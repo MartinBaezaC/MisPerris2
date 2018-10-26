@@ -38,9 +38,11 @@ def grabarUsuario(request):
     nombre_completo = request.POST['txtNombre']
     fecha_nac = request.POST['txtFechaNac']
     telefono =request.POST['txtTelefono']
+    region =request.POST['txtRegion']
+    ciudad =request.POST['txtCity']
     vivienda =request.POST['cmbVivienda']
     #d = Departamento(nombre = 'El nombre del depto')
-    u = Usuario(correo = correo, run = run, nombre_completo = nombre_completo, fecha_nac = fecha_nac, telefono = telefono, vivienda = vivienda)
+    u = Usuario(correo = correo, run = run, nombre_completo = nombre_completo, fecha_nac = fecha_nac, telefono = telefono, region = region, ciudad= ciudad, vivienda = vivienda)
     u.save()
     return render(request, 'perris/grabarUsuario.html',
                   {'nombre_completo' : nombre_completo})
