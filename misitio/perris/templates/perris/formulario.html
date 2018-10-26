@@ -74,43 +74,43 @@
 		<section>
 			<div class="row center-xs">
 				<div class="col col-xs-12">					
-					<form id="reg_formu" action="#" >
+					<form id="reg_formu_usuario" action="/perris/inicio/grabarUsuario" method="post" >
 		              <h2>Crear Cuenta para Adopción</h2>
-		                    
+		                    {% csrf_token %}
 		                    <div>Correo Electrónico:
-		                    	<input type="email" id="email" required placeholder="correo@dominio.cl">
+		                    	<input type="email" name="txtEmail" required placeholder="correo@dominio.cl">
 		                     </div>
 
 
 		                      <div>Run : <input type="text" minlength="10" maxlength="10" 
-		                                       id="txtRut"
+		                                       name="txtRun"
 		                                       onkeyup="checkRut()" 
 		                                placeholder="Ingrese Rut" required ></div>
 
-		                      <div>Nombre Completo : <input type="text" id="txtNombre" 
+		                      <div>Nombre Completo : <input type="text" name="txtNombre" 
 		                                required placeholder="Ej: Juan Perez"></div>
 
-		                      <div>Fecha de Nacimiento : <input id="fechaNac" type="date" required max="2001-01-01"></div>
+		                      <div>Fecha de Nacimiento : <input name="txtFechaNac" type="date" required max="2001-01-01"></div>
 
-		                      <div>Telefono de Contacto : <input type="text"  id="txtTel" maxlength="9" 
+		                      <div>Telefono de Contacto : <input type="text"  name="txtTelefono" maxlength="9" 
                                 onkeypress="return solonumeros(event)"
                                 placeholder="Ingrese Telefono" required > </div>
 
 		                      <div>Region : 
-		                      <select id="txtRegion" oninput="selectCity()" required="">
+		                      <select name="txtRegion" oninput="selectCity()" >
 		                      </select>
 		                      </div>
 
 		                      <div for="txtCity">Ciudad : 
-		                      <select id="txtCity" required></select>
+		                      <select name="txtCity" ></select>
 		                      </div>
 
 		                      <div>Tipo de Vivienda : 
-		                      <select required>
-		                      <option value="Casa con patio grande">Casa con patio grande</option>
-		                      <option value="Casa con patio pequeño">Casa con patio pequeño</option>
-		                      <option value="Casa sin patio ">Casa sin patio</option>
-		                      <option value="Departamento">Departamento</option>
+		                      <select required name="cmbVivienda">
+		                      <option value="CPG">Casa con patio grande</option>
+		                      <option value="CPP">Casa con patio pequeño</option>
+		                      <option value="CSP">Casa sin patio</option>
+		                      <option value="DEP">Departamento</option>
 		                      </select>
 		                      </div>
 		                      <script src="js/region.js"></script>

@@ -74,32 +74,8 @@
 		<section>
 			<div class="row center-xs">
 				<div class="col col-xs-12">					
-					<form id="reg_formu" action="/perris/inicio/grabarPerro" method="post">
-						{% csrf_token %}
-		              <h2>Agregar Perrito</h2>
-		                    
-		                    <div>
-		                    	Nombre : <input type="text" name="txtNombre" required placeholder="Ej: Firulais">
-		                    </div>		                      
-
-		                    <div>
-		                    	Raza : <input type="text" name="txtRaza" required placeholder="Ej: Pastor Alemán">
-		                    </div>
-
-		                    <div>
-		                    	Descripción : <input type="text" name="txtDescrip" required placeholder="Ej: Datos del perrito">
-		                    </div>
-
-		                    <div>Estado : 
-		                    	<select required name="cmbEstado">
-		                      		<option value="R">Rescatado</option>
-		                      		<option value="D">Disponible</option>
-		                      		<option value="A">Adoptado</option>		                      
-		                      	</select>
-		                    </div>	                     
-		                     
-		                    <button type="submit"> Registrar </button>                 
-		        	</form>		        
+					<h1>Se registro el usuario {{nombre_completo}}</h1>
+					<a href="/perris/inicio">Volver a inicio</a>
 				</div>
 			</div>
 			<div class="row start-xs">
@@ -122,3 +98,7 @@
 
 </body>
 </html>
+
+
+
+

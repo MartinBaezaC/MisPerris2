@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Perro
+from .models import Perro, Usuario
 from django.template import loader
 from django.http import HttpResponse
 
@@ -29,6 +29,19 @@ def grabarPerro(request):
     p.save()
     return render(request, 'perris/grabarPerro.html',
                   {'nombre' : nombre})
+
+def grabarUsuario(request):
+    correo = request.POST['txtEmail']
+    run = request.POST['txtRun']
+    nombre_completo = request.POST['txtNombre']
+    fecha_nac = request.POST['txtFechaNac']
+    telefono =request.POST['txtTelefono']
+    vivienda =request.POST['cmbVivienda']
+    #d = Departamento(nombre = 'El nombre del depto')
+    u = Usuario(correo = correo, run = run, nombre_completo = nombre_completo, fecha_nac = fecha_nac, telefono = telefono, vivienda = vivienda)
+    u.save()
+    return render(request, 'perris/grabarUsuario.html',
+                  {'nombre_completo' : nombre_completo})
 
 def cargarRescatados(request):	
 	#Obtenemos los departamentos ordenados de manera descendente.
