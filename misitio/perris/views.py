@@ -2,6 +2,7 @@ from django.shortcuts import render
 from .models import Perro, Usuario
 from django.template import loader
 from django.http import HttpResponse
+from django.contrib.auth.decorators import user_passes_test
 
 
 def index(request):
@@ -16,6 +17,7 @@ def cargarInicio(request):
 def cargarFormulario(request):
     return render(request, 'perris/formulario.html')
 
+@user_passes_test(lambda u: u.is_superuser)
 def cargarFormularioPerros(request):
     return render(request, 'perris/formularioPerros.html')
 
