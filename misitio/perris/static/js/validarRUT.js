@@ -6,21 +6,21 @@
                     "v", "w", "x", "y", "z", ",", ".", "!", "'", "$", "%", "&",
                     "/", "(", ")", "=", "?", "¿", "¡", ".", ","
                 ]
-    var txtRut = document.getElementById("txtRut")
-    txtRut.value = txtRut.value.toLowerCase()
+    var txtRun = document.getElementById("txtRun")
+    txtRun.value = txtRun.value.toLowerCase()
     for(let i in letters){
-        txtRut.value = txtRut.value.replace(letters[i], "")
+        txtRun.value = txtRun.value.replace(letters[i], "")
     }
-    if(txtRut.value.includes("-")) {
-        txtRut.value = txtRut.value.replace(/-/g, "")
-        txtRut.value = txtRut.value.slice(0, txtRut.value.length - 1) + "-" + txtRut.value.slice(txtRut.value.length - 1)
+    if(txtRun.value.includes("-")) {
+        txtRun.value = txtRun.value.replace(/-/g, "")
+        txtRun.value = txtRun.value.slice(0, txtRun.value.length - 1) + "-" + txtRun.value.slice(txtRun.value.length - 1)
     }else
     {
-        txtRut.value = txtRut.value.slice(0, txtRut.value.length - 1) + "-" + txtRut.value.slice(txtRut.value.length - 1)
+        txtRun.value = txtRun.value.slice(0, txtRun.value.length - 1) + "-" + txtRun.value.slice(txtRun.value.length - 1)
     }
-    if(txtRut.value.includes("k")) {
-        txtRut.value = txtRut.value.replace(/k/g, "")
-        txtRut.value += "k"
+    if(txtRun.value.includes("k")) {
+        txtRun.value = txtRun.value.replace(/k/g, "")
+        txtRun.value += "k"
     }
 }
 function solonumeros(e) {

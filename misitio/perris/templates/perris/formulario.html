@@ -7,7 +7,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" type="text/css">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.js"></script>
 	<link rel="stylesheet" href="css/main.css">	
-	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="{% static "js/jquery-3.3.1.min.js" %}"></script>
 	<link rel="stylesheet" href="{% static 'css/main.css' %}">
 	<link rel="stylesheet" href="{% static 'css/galeria.css' %}">
 	<title>Contáctanos</title>
@@ -97,12 +97,12 @@
                                 placeholder="Ingrese Telefono" required > </div>
 
 		                      <div>Region : 
-		                      <select name="txtRegion" oninput="selectCity()" >
+		                      <select id="txtRegion" name="txtRegion" oninput="selectCity()" required>
 		                      </select>
 		                      </div>
 
 		                      <div for="txtCity">Ciudad : 
-		                      <select name="txtCity" ></select>
+		                      <select id="txtCity"name="txtCity" required></select>
 		                      </div>
 
 		                      <div>Tipo de Vivienda : 
@@ -113,8 +113,8 @@
 		                      <option value="DEP">Departamento</option>
 		                      </select>
 		                      </div>
-		                      <script src="js/region.js"></script>
-		                      <script src="js/validarRUT.js"></script>
+		                      <script src="{% static "js/region.js" %}"></script>
+		                      <script src="{% static "js/validarRUT.js" %}"></script>
 		                     
 		                    <button type="submit" value="Registrar" id="btnValidar"> Registrar </button>                 
 		        	</form>		        
