@@ -23,8 +23,7 @@
 <body>
 
 <div id="container">
-	<h2>Bienvenido {{user}}</h2>
-	<a href="/perris/salir">logout</a>
+	
 	<header>
 		<div class="row center-xs">
 			<div class="col col-lg-6			
@@ -41,6 +40,21 @@
 			</div>
 		</div>
 	</header>
+	<section >
+		<div id="Cuenta" class="row center-xs" style="background:  #00e6b8; text-align: center;">
+			<div  class="col col-lg-6
+							col-xs-6">
+				{% if not user.is_authenticated %}					
+					
+				{% else %}
+					<h2>Bienvenido {{user}}</h2>
+					<a class="logout" href="/perris/salir">logout</a>		
+				{% endif %}
+				
+			</div>
+			
+		</div>
+	</section>
 
 	<nav>
 		<div class="row center-xs">

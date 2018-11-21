@@ -4,6 +4,19 @@ header{
 	text-align: center;
 }
 
+.logout{
+	padding: 12px ;	
+	display: grid;	
+	color :	white;		
+}
+
+.login{
+	padding: 12px ;	
+	display: grid;	
+	color :	white;	
+	margin: 12px;
+}
+
 nav{
 	color: white;
 	background: #00e6b8;
@@ -20,6 +33,9 @@ a{
 	display: grid;			
 	color: white;	
 }	
+a:hover, a:active{
+	background-color: #13DAB1;
+}
 
 img{
 	width: 512px;	
