@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'social_django',
 ]
 
 MIDDLEWARE = [
@@ -120,3 +121,23 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+SOCIAL_AUTH_URL_NAMESPACE = 'social'
+
+LOGOUT_URL = '/aplicacion/login'
+
+LOGIN_REDIRECT_URL = '/perris/inicio'
+
+AUTHENTICATION_BACKENDS = (
+    'social_core.backends.open_id.OpenIdAuth',
+    'social_core.backends.google.GoogleOpenId',
+    'social_core.backends.google.GoogleOAuth2',
+    'social_core.backends.google.GoogleOAuth',
+    'social_core.backends.twitter.TwitterOAuth',
+    'social_core.backends.yahoo.YahooOpenId',    
+    'social_core.backends.facebook.FacebookOAuth2',
+    'django.contrib.auth.backends.ModelBackend',
+)
+
+SOCIAL_AUTH_FACEBOOK_KEY = '199111160979739'  # App ID
+SOCIAL_AUTH_FACEBOOK_SECRET = '2fd56c8cf091fba7ca79701fe3afb202'  # App Secret

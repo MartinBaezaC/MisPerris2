@@ -2,6 +2,7 @@ from django.shortcuts import render
 from .models import Perro, Usuario
 from django.template import loader
 from django.http import HttpResponse
+from django.contrib.auth import logout as auth_logout
 from django.contrib.auth.decorators import user_passes_test
 
 
@@ -20,6 +21,11 @@ def cargarFormulario(request):
 @user_passes_test(lambda u: u.is_superuser)
 def cargarFormularioPerros(request):
     return render(request, 'perris/formularioPerros.html')
+
+def logout(request):
+    """Logs out user"""
+    auth_logout(request)
+    return render(request, 'perris/index.html')
 
 def grabarPerro(request):
     nombre = request.POST['txtNombre']

@@ -30,6 +30,8 @@ router.register(r'perros', PerroViewSet)
 router.register(r'usuarios', UsuarioViewSet)
 
 urlpatterns = [
+    path('', include('social_django.urls', namespace='social')),
+    path('salir', views.logout, name='logout'),
     path('', views.index, name='index'),
     path('<int:perro_id>/', views.detalle, name='detalle'),
     path('inicio', views.cargarInicio, name='cargarInicio'),
