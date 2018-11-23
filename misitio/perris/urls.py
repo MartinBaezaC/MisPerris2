@@ -8,7 +8,7 @@ from . import views
 class PerroSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Perro
-        fields = ('url', 'nombre', 'raza', 'descripcion')
+        fields = ('url', 'nombre', 'raza', 'descripcion', 'estado')
 
 # ViewSets define the view behavior.
 class PerroViewSet(viewsets.ModelViewSet):
@@ -18,7 +18,7 @@ class PerroViewSet(viewsets.ModelViewSet):
 class UsuarioSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Usuario
-        fields = ('url', 'nombre_completo', 'correo', 'run')
+        fields = ('url', 'nombre_completo', 'correo', 'run', 'fecha_nac', 'telefono', 'region', 'ciudad', 'vivienda')
 
 # ViewSets define the view behavior.
 class UsuarioViewSet(viewsets.ModelViewSet):
